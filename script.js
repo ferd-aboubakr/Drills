@@ -4,11 +4,21 @@ let tasks = [
   { id: 3, text: "Test LocalStorage", duration: 20 }
 ];
 
-const taskList = document.getElementById('task-list');
-const totalMinsSpan = document.getElementById('total-mins');
+
+
+const tasklist =document.getElementById('task-list');
+const totalMinSpan = document.getElementById('total-mins');
 
 function renderTasks() {
   // 1. Clear the taskList innerHTML to prevent duplication
+tasklist.innerHTML = '';
+tasks.forEach((task) => {
+  const li = document.createElement('li');
+  li.textContent= `${task.text}(${task.duration} mins)`;
+  tasklist.append(li);}
+)
+
+totalMinSpan.textContent = tasks.reduce((totalTime, taskTime) => totalTime+taskTime.duration ,0) ;
   
   // 2. Loop through tasks using forEach(), create <li> elements, 
   //    set their textContent to `${task.text} (${task.duration} mins)`, 
