@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript-dom-storage-series</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>javascript-dom-storage-series</h1>
+        <p>10 rapid-fire DOM, events, array methods, and LocalStorage exercises.</p>
+      </header>
+
+      <section id="ex01" class="card">
+        <h2>01. Warm-Up Render &amp; Reduce</h2>
+        <button id="ex01-render">Render Data</button>
+        <ul id="ex01-list"></ul>
+        <p>Total score: <span id="ex01-total">0</span></p>
+      </section>
+
+      <section id="ex02" class="card">
+        <h2>02. Form State</h2>
+        <form id="profile-form">
+          <label>
+            Name
+            <input id="profile-name" name="name" type="text" required />
+          </label>
+          <label>
+            Role
+            <input id="profile-role" name="role" type="text" required />
+          </label>
+          <button type="submit">Save Form State</button>
+        </form>
+        <p>Current form state: <span id="profile-state">None</span></p>
+      </section>
+
+      <section id="ex03" class="card">
+        <h2>03. LocalStorage Bridge</h2>
+        <button id="restore-profile">Restore Saved Form State</button>
+        <button id="clear-profile">Clear Saved Form State</button>
+        <p>Storage status: <span id="profile-storage-status">Nothing stored</span></p>
+      </section>
+
+      <section id="ex04" class="card">
+        <h2>04. Analytics Engine (filter/map)</h2>
+        <button id="ex04-run">Run Student Analytics</button>
+        <p>Passing students: <span id="ex04-output">None</span></p>
+      </section>
+
+      <section id="ex05" class="card">
+        <h2>05. Shopping Cart Logic (find)</h2>
+        <div class="row">
+          <input id="cart-item" type="text" placeholder="Item name" />
+          <button id="cart-add">Add to Cart</button>
+        </div>
+        <ul id="cart-list"></ul>
+      </section>
+
+      <section id="ex06" class="card">
+        <h2>06. Method Chaining</h2>
+        <button id="ex06-run">Show Top Rated (2020+)</button>
+        <p><span id="ex06-output">No results</span></p>
+      </section>
+
+      <section id="ex07" class="card">
+        <h2>07. Boolean Checks (some/every)</h2>
+        <button id="ex07-run">Validate Dataset</button>
+        <p>Every user active: <span id="ex07-every">-</span></p>
+        <p>Any trial user: <span id="ex07-some">-</span></p>
+      </section>
+
+      <section id="ex08" class="card">
+        <h2>08. Deletion Pattern</h2>
+        <button id="ex08-reset">Reset Tasks</button>
+        <ul id="ex08-list"></ul>
+      </section>
+
+      <section id="ex09" class="card">
+        <h2>09. Event Delegation</h2>
+        <div id="ex09-actions" class="row">
+          <button data-action="save">Save</button>
+          <button data-action="archive">Archive</button>
+          <button data-action="share">Share</button>
+        </div>
+        <p>Last action: <span id="ex09-status">None</span></p>
+      </section>
+
+      <section id="ex10" class="card">
+        <h2>10. Final Boss Expense Tracker</h2>
+        <form id="expense-form">
+          <label>
+            Expense
+            <input id="expense-title" type="text" required />
+          </label>
+          <label>
+            Amount
+            <input id="expense-amount" type="number" min="0" step="0.01" required />
+          </label>
+          <button type="submit">Add Expense</button>
+        </form>
+        <ul id="expense-list"></ul>
+        <p>Total expenses: $<span id="expense-total">0.00</span></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
