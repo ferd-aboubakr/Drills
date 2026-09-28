@@ -12,11 +12,15 @@ const totalMinSpan = document.getElementById('total-mins');
 function renderTasks() {
   // 1. Clear the taskList innerHTML to prevent duplication
 tasklist.innerHTML = '';
-tasks.forEach((task) => {
-  const li = document.createElement('li');
-  li.textContent= `${task.text}(${task.duration} mins)`;
-  tasklist.append(li);}
-)
+// tasks.forEach((task) => {
+//   const li = document.createElement('li');
+//   li.textContent= `${task.text}(${task.duration} mins)`;
+//   tasklist.append(li);}
+// )
+
+tasks.forEach(task => {
+tasklist.innerHTML += `<li>${task.text} ( ${task.duration}mins)</li>`;
+});
 
 totalMinSpan.textContent = tasks.reduce((totalTime, taskTime) => totalTime+taskTime.duration ,0) ;
   
