@@ -1,4 +1,4 @@
-let tasks = [
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [
   { id: 1, text: "Review Array Methods", duration: 30 },
   { id: 2, text: "Build DOM Element", duration: 45 },
   { id: 3, text: "Test LocalStorage", duration: 20 }
@@ -55,6 +55,12 @@ form.addEventListener('submit', (e) => {
   // 3. Push the new task into the 'tasks' array
   
   tasks.push(task);
+
+  localStorage.setItem('tasks',JSON.stringify(tasks));
+
+
+
+
   // 4. Reset the input field (taskInput.value = '')
   taskInput.value= '';
   // 5. Call renderTasks() to update the screen
