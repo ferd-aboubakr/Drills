@@ -4,6 +4,9 @@ let tasks = JSON.parse(localStorage.getItem('tasks')) || [
   { id: 3, text: "Test LocalStorage", duration: 20 }
 ];
 
+let students = JSON.parse(localStorage.getItem('students')) || [{name: "Ali", grade: 80}, {name:
+"Sara", grade: 45},{name: "Ali", grade: 75}, {name: "jake", grade: 55}, {name: "Nadia", grade: 90}, {name: "john", grade: 22}];
+
 
 
 const tasklist =document.getElementById('task-list');
@@ -35,6 +38,34 @@ totalMinSpan.textContent = tasks.reduce((totalTime, taskTime) => totalTime+taskT
   //    and display the total result inside totalMinsSpan.textContent
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let listStudent = document.getElementById('passed');
+
+listStudents = JSON.parse(localStorage.getItem('students'));
+
+let passingList = students.filter((student) => {
+ return student.grade >= 50
+}).map((student) => student.name).join(', ');
+console.log(passingList);
+
+
 // Run it
 
 
@@ -51,7 +82,7 @@ form.addEventListener('submit', (e) => {
   //    - text: taskInput.value
   //    - duration: 15 (let's default it to 15 mins for now)
   
-  const task = {id: Date.now(), text: `${taskInput.value}`, duration: 15};
+  const task = {id: Date.now(), text: '${taskInput.value}', duration: 15};
   // 3. Push the new task into the 'tasks' array
   
   tasks.push(task);
