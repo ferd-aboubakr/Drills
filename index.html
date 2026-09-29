@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Exercise: Task Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Exercise: Task Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="dashboard-card">
+    <h2>Task Duration Dashboard</h2>
 
-    <div class="dashboard-card">
-        <h2>Task Duration Dashboard</h2>
-        
-        <!-- Target list container -->
-         <form id="task-form">
-    <input type="text" id="task-input" placeholder="Enter new task..." required>
-    <button type="submit">Add Task</button>
-</form>
+    <!-- Target list container -->
 
-<ul id="task-list"></ul>
-<h3>Total Estimated Time: <span id="total-mins">0</span> mins</h3>
-        <ul id="task-list"></ul>
-        
-        <!-- Target total display -->
-        <div class="summary">
-            <h3>Total Estimated Time: <span id="total-mins">0</span> mins</h3>
-        </div>
+
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Enter new task..." required>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <ul id="task-list"></ul>
+    <h3>Total Estimated Time: <span id="total-mins">0</span> mins</h3>
+
+
+
+    <ul id="task-list"></ul>
+
+     <h2>Passing students (score >=50)</h2>
+    <div id="passed"></div>
+
+
+
+    <!-- Target total display -->
+    <div class="summary">
+      <h3>Total Estimated Time: <span id="total-mins">0</span> mins</h3>
     </div>
+  </div>
 
-    <!-- Link to your JavaScript file -->
-    <script src="script.js"></script>
+  <!-- Link to your JavaScript file -->
+  <script src="script.js"></script>
 </body>
+
 </html>

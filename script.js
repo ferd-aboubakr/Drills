@@ -4,7 +4,7 @@ let tasks = JSON.parse(localStorage.getItem('tasks')) || [
   { id: 3, text: "Test LocalStorage", duration: 20 }
 ];
 
-let students = JSON.parse(localStorage.getItem('students')) || [{name: "Ali", grade: 80}, {name:
+let students = JSON.parse(localStorage.getItem('students')) || [{name: "Alae", grade: 80}, {name:
 "Sara", grade: 45},{name: "Ali", grade: 75}, {name: "jake", grade: 55}, {name: "Nadia", grade: 90}, {name: "john", grade: 22}];
 
 
@@ -25,7 +25,7 @@ tasklist.innerHTML = '';
 // )
 
 tasks.forEach(task => {
-tasklist.innerHTML += `<li>${task.text} ( ${task.duration}mins)</li>`;
+tasklist.innerHTML += `<li>${task.text} ( `${task.duration}` mins)</li>`;
 });
 
 totalMinSpan.textContent = tasks.reduce((totalTime, taskTime) => totalTime+taskTime.duration ,0) ;
@@ -58,12 +58,11 @@ totalMinSpan.textContent = tasks.reduce((totalTime, taskTime) => totalTime+taskT
 
 let listStudent = document.getElementById('passed');
 
-listStudents = JSON.parse(localStorage.getItem('students'));
-
 let passingList = students.filter((student) => {
  return student.grade >= 50
 }).map((student) => student.name).join(', ');
-console.log(passingList);
+listStudent.textContent = passingList ;
+
 
 
 // Run it
