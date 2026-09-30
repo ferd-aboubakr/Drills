@@ -25,7 +25,7 @@ tasklist.innerHTML = '';
 // )
 
 tasks.forEach(task => {
-tasklist.innerHTML += `<li>${task.text} ( `${task.duration}` mins)</li>`;
+tasklist.innerHTML += `<li> ${task.text} ${task.duration}  (mins)</li>`;
 });
 
 totalMinSpan.textContent = tasks.reduce((totalTime, taskTime) => totalTime+taskTime.duration ,0) ;
@@ -81,7 +81,7 @@ form.addEventListener('submit', (e) => {
   //    - text: taskInput.value
   //    - duration: 15 (let's default it to 15 mins for now)
   
-  const task = {id: Date.now(), text: '${taskInput.value}', duration: 15};
+  const task = {id: Date.now(), text: `${taskInput.value}`, duration: 15};
   // 3. Push the new task into the 'tasks' array
   
   tasks.push(task);
@@ -97,3 +97,21 @@ form.addEventListener('submit', (e) => {
   renderTasks();
 });
 renderTasks();
+
+
+let cart =[];
+const Laptops = [{id:1, name: razer, price: 1200},{id:2, name: medion, price: 900}]
+
+//   <h2>Laptops</h2>
+//   <button id="add-btn">Add Laptop</button>
+//   <div id="cart"
+
+const addButton = document.getElementById('add-btn');
+const displayCart = document.getElementById('cart');
+
+function renderCart (){
+
+  addButton.addEventListener("click", () => {
+
+  })
+}
