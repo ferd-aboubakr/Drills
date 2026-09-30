@@ -99,19 +99,32 @@ form.addEventListener('submit', (e) => {
 renderTasks();
 
 
-let cart =[];
-const Laptops = [{id:1, name: razer, price: 1200},{id:2, name: medion, price: 900}]
+let cart = [];
+const product = { id: 1, name: "Laptop", price: 1000 };
 
-//   <h2>Laptops</h2>
-//   <button id="add-btn">Add Laptop</button>
-//   <div id="cart"
+const addBtn = document.getElementById('add-btn');
+const cartDisplay = document.getElementById('cart');
 
-const addButton = document.getElementById('add-btn');
-const displayCart = document.getElementById('cart');
-
-function renderCart (){
-
-  addButton.addEventListener("click", () => {
-
-  })
+function renderCart() {
+  cartDisplay.innerHTML = '';
+  cart.forEach(item => {
+    cartDisplay.innerHTML += `<div>${item.name} x${item.qty} - $${item.price * item.qty}</div>`;
+  });
 }
+
+addBtn.addEventListener('click', () => {
+  // Write your code here using cart.find()[cite: 3]
+
+  const foundItem = cart.find(item => item.id == product.id);
+  if(foundItem)
+  {
+    foundItem.qty+=1;
+  }
+  else{
+    cart.push({...product,qty:1})
+  }
+  renderCart();
+  
+});
+
+renderCart();
